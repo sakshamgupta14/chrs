@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com</groupId>
+	<artifactId>chrs</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>chrs Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<spring.version>4.2.4.RELEASE</spring.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<hibernate.version>4.3.5.Final</hibernate.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Spring AOP + AspectJ -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.2.4.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.6.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.6.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.10</version>
+		</dependency>
+		<!-- *********************** START - Hibernate *********************** -->
+		<!-- The main artifact, needed to build applications using the native Hibernate 
+			APIs including defining metadata in both annotations as well as Hibernate's 
+			own hbm.xml format -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- optional modules -->
+		<!-- provides historical auditing of changes to your entities -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<!-- provides integration between Hibernate and the C3P0 connection pool 
+			library -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<!-- provides integration between Hibernate and the Proxool connection 
+			pool library -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-proxool</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<!-- provides integration between Hibernate and EhCache, as a second-level 
+			cache -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>chrs</finalName>
+	</build>
+</project>
