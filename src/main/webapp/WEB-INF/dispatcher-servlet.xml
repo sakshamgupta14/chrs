@@ -19,7 +19,7 @@
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/linksharing_db"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/chrs_db"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="igdefault"></property>
 	</bean>
@@ -33,8 +33,8 @@
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-				<prop key="hibernate.hbm2ddl.auto">update</prop>
-				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+				<prop key="hibernate.show_sql">true</prop>
 
 			</props>
 		</property>
@@ -57,7 +57,6 @@
 		<property name="transactionAttributes">
 			<props>
 				<prop key="save*">PROPAGATION_REQUIRES_NEW,-Exception</prop>
-				<prop key="subscribe*">PROPAGATION_REQUIRES_NEW,-Exception</prop>
 				<prop key="update*">PROPAGATION_REQUIRES_NEW,-Exception</prop>
 				<prop key="delete*">PROPAGATION_REQUIRES_NEW,-Exception</prop>
 				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
@@ -67,79 +66,4 @@
 		</property>
 	</bean>
 
-	<bean  id="multipartResolver"
-        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="100000000000"></property>
-	</bean>
-
-
-	<bean id="userDAO" class="com.ttnd.linksharing.dao.impl.UserDAOImpl">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
-
-	<bean id="topicDAO" class="com.ttnd.linksharing.dao.impl.TopicDAOImpl">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
-
-	<bean id="subscriptionsDAO" class="com.ttnd.linksharing.dao.impl.SubscriptionsDAOImpl">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory" />
-		</property>
-	</bean>
-
-	<bean id="resourceDAO" class="com.ttnd.linksharing.dao.impl.ResourceDAOImpl">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory"/>
-		</property>
-	</bean>
-	
-	<bean id="readingItemDAO" class="com.ttnd.linksharing.dao.impl.ReadingItemDAOImpl">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory"/>
-		</property>
-	</bean>
-	
-	<bean id="userService" parent="baseTransactionProxy">
-		<property name="target">
-			<bean class="com.ttnd.linksharing.service.impl.UserServiceImpl">
-				<property name="userDAO">
-					<ref bean="userDAO" />
-				</property>
-			</bean>
-		</property>
-	</bean>
-
-	<bean id="topicService" parent="baseTransactionProxy">
-		<property name="target">
-			<bean class="com.ttnd.linksharing.service.impl.TopicServiceImpl">
-				<property name="topicDAO">
-					<ref bean="topicDAO" />
-				</property>
-			</bean>
-		</property>
-	</bean>
-
-	<bean id="subscriptionsService" parent="baseTransactionProxy">
-		<property name="target">
-			<bean class="com.ttnd.linksharing.service.impl.SubscriptionsServiceImpl">
-				<property name="subscriptionsDAO">
-					<ref bean="subscriptionsDAO" />
-				</property>
-			</bean>
-		</property>
-	</bean>
-
-	<bean id="resourceService" parent="baseTransactionProxy">
-		<property name="target">
-			<bean class="com.ttnd.linksharing.service.impl.ResourceServiceImpl">
-				<property name="resourceDAO">
-					<ref bean="resourceDAO" />
-				</property>
-			</bean>
-		</property>
-	</bean>
 </beans>

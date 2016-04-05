@@ -4,6 +4,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.chrs.dao.DoctorDAO;
+import com.chrs.dao.impl.DoctorDAOImpl;
 import com.chrs.dto.DoctorDTO;
 import com.chrs.entities.Doctor;
 import com.chrs.service.DoctorService;
@@ -47,5 +48,5 @@ public class DoctorServiceImpl implements DoctorService {
 	public void setDoctorDAO(DoctorDAO doctorDAO) {
 		this.doctorDAO = doctorDAO;
 	}
-
+	
 }

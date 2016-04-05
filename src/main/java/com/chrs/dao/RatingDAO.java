@@ -11,7 +11,7 @@ import com.chrs.entities.Rating;
 public interface RatingDAO {
 
 	Rating getRating(Doctor doctor);
-
+	
 	void saveOrUpdateRating(Rating rating);
 
 }
