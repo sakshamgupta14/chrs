@@ -2,17 +2,22 @@ package com.chrs.entities;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /**
  * 
  * @author saksham
  *
  */
+@Entity
+@Table(name = "doctor")
 public class Doctor {
 
 	@Id
@@ -41,8 +46,24 @@ public class Doctor {
 	@ManyToOne(cascade = CascadeType.ALL, targetEntity = Location.class, fetch = FetchType.EAGER)
 	private Location location;
 
-	@Column(name = "rating")
-	private Double rating;
+	@OneToOne(fetch = FetchType.EAGER, targetEntity = Rating.class)
+	private Rating rating;
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+	public Rating getRating() {
+		return rating;
+	}
+
+	public void setRating(Rating rating) {
+		this.rating = rating;
+	}
 
 	public Integer getId() {
 		return id;
@@ -98,14 +119,6 @@ public class Doctor {
 
 	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
-	}
-
-	public Double getRating() {
-		return rating;
-	}
-
-	public void setRating(Double rating) {
-		this.rating = rating;
 	}
 
 }
