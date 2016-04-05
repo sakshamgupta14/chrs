@@ -1,5 +1,9 @@
 package com.chrs.dto;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class DoctorDTO {
 
 	private String name;

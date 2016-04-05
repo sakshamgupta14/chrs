@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
 /**
  * 
  * @author saksham
@@ -39,6 +40,10 @@ public class Doctor {
 
 	@ManyToOne(cascade = CascadeType.ALL, targetEntity = Location.class, fetch = FetchType.EAGER)
 	private Location location;
+
+	@Column(name = "rating")
+	private Double rating;
+
 	public Integer getId() {
 		return id;
 	}
@@ -93,6 +98,14 @@ public class Doctor {
 
 	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
+	}
+
+	public Double getRating() {
+		return rating;
+	}
+
+	public void setRating(Double rating) {
+		this.rating = rating;
 	}
 
 }

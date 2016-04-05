@@ -7,19 +7,28 @@ import com.chrs.dao.DoctorDAO;
 import com.chrs.dto.DoctorDTO;
 import com.chrs.entities.Doctor;
 import com.chrs.service.DoctorService;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class DoctorServiceImpl implements DoctorService {
 
 	@Autowired
 	private DoctorDAO doctorDAO;
 	
 	public DoctorDTO getDoctorDTO(String name) {
-		// TODO Auto-generated method stub
-		return null;
+
+		Doctor doctor = doctorDAO.getDoctor(name);
+		
+		DoctorDTO doctorDTO = new DoctorDTO();
+		BeanUtils.copyProperties(doctor, doctorDTO);
+		
+		return doctorDTO;
 	}
 
 	public DoctorDTO getAllDoctorDTOs() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

@@ -4,7 +4,11 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class Location {
 
 	@Id
@@ -14,6 +18,7 @@ public class Location {
 	
 	@Column(name = "name")
 	private String name;
+	
 	
 	public Integer getId() {
 		return id;

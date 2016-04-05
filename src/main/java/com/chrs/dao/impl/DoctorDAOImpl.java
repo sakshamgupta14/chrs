@@ -9,7 +9,11 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import com.chrs.dao.DoctorDAO;
 import com.chrs.entities.Doctor;
 import com.chrs.entities.Location;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class DoctorDAOImpl extends HibernateDaoSupport implements DoctorDAO {
 
 	public Doctor getDoctor(String name) {
