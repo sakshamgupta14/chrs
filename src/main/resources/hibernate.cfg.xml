@@ -17,6 +17,7 @@
 		<mapping class="com.chrs.entities.User" />
 		<mapping class="com.chrs.entities.Doctor" />
 		<mapping class="com.chrs.entities.Rating" />
+		<mapping class="com.chrs.entities.Location" />
 	</session-factory>
 </hibernate-configuration>
 		

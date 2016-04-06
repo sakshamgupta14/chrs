@@ -1,0 +1,72 @@
+/*CSS for the home page content*/
+.top-carousel
+	{
+		margin-top:-20px;
+	}
+
+.main
+	{
+		margin-top:4%;
+	}
+	
+body
+	{
+		color:#008B8B;
+	}
+
+p
+	{
+		color:#808080;
+	}
+
+.mymap
+	{
+		padding:0px;
+	}
+
+/*CSS for the header.php or navigation bar*/
+.mynavbar
+	{
+		border:none;
+		box-shadow:0px 3px #DCDCDF;
+		padding:5px;
+		z-index:1000;
+	}
+
+/*CSS for the footer.php or footer section*/
+.foot
+	{
+		border-bottom:1px #008B8B dotted;
+		list-style-type:circle;
+		width:50%;
+		padding:2% 0% 2% 0%;
+	}
+
+.foot a
+	{
+		color:#008B8B;
+	}
+
+.glyphicon-menu-up
+	{
+		font-size:20px;
+	}
+
+/*CSS for the different screen sizes*/
+@media screen and (max-width:450px)
+{
+   #map1
+		{
+			height:300px !important;
+		}
+   
+   #brand
+		{
+			font-size:18px !important;
+		}
+   
+   #panelhead
+		{
+			font-size:10px;
+		}
+ }
