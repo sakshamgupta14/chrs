@@ -3,6 +3,7 @@ package com.chrs.dao.impl;
 import java.util.List;
 
 import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
@@ -31,6 +32,8 @@ public class DoctorDAOImpl extends HibernateDaoSupport implements DoctorDAO {
 	public List<Doctor> getAllDoctors(Location location) {
 
 		DetachedCriteria criteria = DetachedCriteria.forClass(Doctor.class);
+		criteria.add(Restrictions.eq("location", location));
+		criteria.addOrder(Order.asc("rating"));
 		List<Doctor> doctors = (List<Doctor>) getHibernateTemplate().findByCriteria(criteria);
 
 		return doctors;

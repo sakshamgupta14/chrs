@@ -1,7 +1,11 @@
 package com.chrs.dao;
 
 import com.chrs.entities.User;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public interface UserDAO {
 
 	Integer saveUser(User user);

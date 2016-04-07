@@ -43,6 +43,9 @@ public class Doctor {
 	@Column(name = "contact_no")
 	private String contactNo;
 
+	@Column(name = "salary_range")
+	private Integer salaryRange;
+	
 	@ManyToOne(cascade = CascadeType.ALL, targetEntity = Location.class, fetch = FetchType.EAGER)
 	private Location location;
 
@@ -119,6 +122,14 @@ public class Doctor {
 
 	public void setContactNo(String contactNo) {
 		this.contactNo = contactNo;
+	}
+
+	public Integer getSalaryRange() {
+		return salaryRange;
+	}
+
+	public void setSalaryRange(Integer salaryRange) {
+		this.salaryRange = salaryRange;
 	}
 
 }

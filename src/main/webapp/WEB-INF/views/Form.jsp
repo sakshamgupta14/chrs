@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 	<div class="container-fluid" style="margin:2% 5% 2% 5%">
-		<form role="form" class="form-horizontal" method="POST" enctype="multipart/form-data" action="view_page.php">
+		<form role="form" class="form-horizontal" method="POST" enctype="multipart/form-data" action="/search">
 			<!--Other relevant Information-->	
 			<div class="form-group">
 				<div class="col-lg-6">
@@ -35,7 +35,7 @@
 			<div class="form-group">
 				<label class="control-label col-lg-5" for="state">Location :</label>
 				<div class="col-lg-7">
-					<select class="form-control" id="state" name="state">
+					<select class="form-control" id="locationName" name="locationName">
 						<option value="0">--select any one--</option>
 						<option value="1">Crossing Republik</option>
 						<option value="6">Gandhi Nagar</option>

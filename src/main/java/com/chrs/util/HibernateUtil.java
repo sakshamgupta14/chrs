@@ -6,7 +6,11 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.chrs.entities.Doctor;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class HibernateUtil {
 
 	public static void main(String[] args) {

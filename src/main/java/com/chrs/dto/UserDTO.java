@@ -2,7 +2,11 @@ package com.chrs.dto;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class UserDTO {
 
 	private String name;

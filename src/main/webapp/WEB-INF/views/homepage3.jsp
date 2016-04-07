@@ -118,8 +118,8 @@
 
 		<div class="container-fluid" align="center"
 			style="margin: 2% 5% 2% 5%; border: 2px solid #AFAFAF; padding: 0em 3em 3em 3em; border-radius: 10px">
-			<form role="form" class="form-horizontal" method="POST"
-				enctype="multipart/form-data" action="view_page.php">
+			<form role="form" class="form-horizontal" method="get"
+				enctype="multipart/form-data" action="/search">
 				<h2 class="well" align="center">Query Box</h2>
 				<hr>
 				<!--Other relevant Information-->
@@ -128,7 +128,7 @@
 						<label class="control-label col-lg-5" for="state">Location
 							:</label>
 						<div class="col-lg-7">
-							<select class="form-control" id="state" name="state">
+							<select class="form-control" id="locationName" name="locationName">
 								<option value="0">--select any one--</option>
 								<option value="1">Crossing Republik</option>
 								<option value="6">Gandhi Nagar</option>
@@ -196,7 +196,7 @@
 		<!--map-->
 
 		<div class="container">
-			<div id="googleMap" style="width: 100%; height: 400px;"></div>
+			<div id="googleMap" style="width: 85%; height: 400px;"></div>
 		</div>
 		<!--footer-->
 
