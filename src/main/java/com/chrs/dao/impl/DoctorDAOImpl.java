@@ -32,8 +32,8 @@ public class DoctorDAOImpl extends HibernateDaoSupport implements DoctorDAO {
 	public List<Doctor> getAllDoctors(Location location) {
 
 		DetachedCriteria criteria = DetachedCriteria.forClass(Doctor.class);
-		criteria.add(Restrictions.eq("location", location));
-		criteria.addOrder(Order.asc("rating"));
+		criteria.add(Restrictions.eq("location", location)).createCriteria("rating");
+		criteria.addOrder(Order.asc("totalRating"));
 		List<Doctor> doctors = (List<Doctor>) getHibernateTemplate().findByCriteria(criteria);
 
 		return doctors;
