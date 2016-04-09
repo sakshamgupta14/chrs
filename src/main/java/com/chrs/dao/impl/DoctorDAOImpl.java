@@ -44,4 +44,16 @@ public class DoctorDAOImpl extends HibernateDaoSupport implements DoctorDAO {
 		return (Integer) getHibernateTemplate().save(doctor);
 	}
 
+	public Doctor getDoctor(Integer id) {
+		
+		DetachedCriteria criteria = DetachedCriteria.forClass(Doctor.class);
+		criteria.add(Restrictions.eq("id", id));
+		
+		List<?> list = getHibernateTemplate().findByCriteria(criteria);
+		if (!list.isEmpty()) {
+			return (Doctor) list.get(0);
+		}
+		return null;
+	}
+
 }

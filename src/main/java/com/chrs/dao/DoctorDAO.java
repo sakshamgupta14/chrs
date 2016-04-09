@@ -17,4 +17,6 @@ public interface DoctorDAO {
 	
 	List<Doctor> getAllDoctors(Location location);
 	
+	Doctor getDoctor(Integer id);
+	
 }

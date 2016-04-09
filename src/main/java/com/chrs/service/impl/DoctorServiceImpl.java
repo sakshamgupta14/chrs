@@ -84,4 +84,16 @@ public class DoctorServiceImpl implements DoctorService {
 		return doctorDTOs;
 	}
 
+	public DoctorDTO getDoctorDTO(Integer id) {
+		
+		Doctor doctor = doctorDAO.getDoctor(id);
+		
+		if(doctor!=null) {
+			DoctorDTO doctorDTO = new DoctorDTO();
+			BeanUtils.copyProperties(doctor, doctorDTO);
+			return doctorDTO;
+		}
+		return null;
+	}
+
 }

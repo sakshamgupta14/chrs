@@ -18,4 +18,6 @@ public interface DoctorService {
 	Integer addDoctor(DoctorDTO doctorDTO);
 
 	List<DoctorDTO> getDoctorDTOByLocation(LocationDTO locationDTO);
+	
+	DoctorDTO getDoctorDTO(Integer id);
 }
