@@ -49,7 +49,7 @@ public class SearchController {
 		DoctorDTO doctorDTO = doctorService.getDoctorDTO(id);
 		
 		RatingDTO ratingDTO = ratingService.getRatingDTO(doctorDTO);
-		
+		ratingDTO.setDoctorDTO(doctorDTO);
 		ModelAndView modelAndView = new ModelAndView("");
 		
 		modelAndView.addObject("doctor", doctorDTO);

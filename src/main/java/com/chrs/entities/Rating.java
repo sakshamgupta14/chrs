@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 /**
  * 
  * @author saksham
@@ -21,22 +22,22 @@ public class Rating {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
 	private Integer id;
-	
+
 	@Column
 	private Integer salaryRangeVisitors;
-	
+
 	@Column
 	private Integer nonSalaryRangeVisitors;
-	
+
 	@Column
 	private Integer salaryRangeRecommendations;
-	
+
 	@Column
 	private Integer nonSalaryRangeRecommendations;
-	
+
 	@Column
 	private Double starRating;
-	
+
 	@Column
 	private Integer noOfRating;
 
@@ -45,7 +46,7 @@ public class Rating {
 
 	@OneToOne(fetch = FetchType.EAGER, targetEntity = Doctor.class)
 	private Doctor doctor;
-	
+
 	public Doctor getDoctor() {
 		return doctor;
 	}

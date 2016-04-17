@@ -14,4 +14,5 @@ public interface RatingDAO {
 	
 	void saveOrUpdateRating(Rating rating);
 
+	Rating getRatingById(Integer id);
 }

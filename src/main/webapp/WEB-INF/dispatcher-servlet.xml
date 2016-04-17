@@ -9,10 +9,10 @@
    http://www.springframework.org/schema/mvc
    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-	<mvc:annotation-driven/>
+	<mvc:annotation-driven />
 	<context:component-scan base-package="com.chrs.controller"></context:component-scan>
 
-	
+
 	<mvc:resources location="/images/" mapping="/images/**" />
 	<mvc:resources location="/css/" mapping="/css/**" />
 	<mvc:resources location="/js/" mapping="/js/**" />
@@ -90,9 +90,26 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
+
+	<bean id="ratingDAO" class="com.chrs.dao.impl.RatingDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
 	<bean id="doctorService" parent="baseTransactionProxy">
 		<property name="target">
 			<bean class="com.chrs.service.impl.DoctorServiceImpl">
+				<property name="doctorDAO">
+					<ref bean="doctorDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="ratingService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="com.chrs.service.impl.RatingServiceImpl">
 				<property name="doctorDAO">
 					<ref bean="doctorDAO" />
 				</property>

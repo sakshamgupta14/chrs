@@ -10,6 +10,7 @@ import com.chrs.dto.RatingDTO;
 import com.chrs.entities.Doctor;
 import com.chrs.entities.Rating;
 import com.chrs.service.RatingService;
+
 /**
  * 
  * @author saksham
@@ -19,18 +20,17 @@ public class RatingServiceImpl implements RatingService {
 
 	@Autowired
 	private DoctorDAO doctorDAO;
-	
+
 	@Autowired
 	private RatingDAO ratingDAO;
-	
-	public void saveOrUpdateRating(DoctorDTO doctorDTO) {
 
-		Doctor doctor = doctorDAO.getDoctor(doctorDTO.getName());
-		Rating rating = ratingDAO.getRating(doctor);
-		//incomplete
+	public void saveOrUpdateRating(RatingDTO ratingDTO) {
+
+		Rating rating = new Rating();
+		rating.setDoctor(doctorDAO.getDoctor(ratingDTO.getDoctorDTO().getId()));
+
+		// rating.setNonSalaryRangeRecommendations(nonSalaryRangeRecommendations);
 	}
-	
-	
 
 	public DoctorDAO getDoctorDAO() {
 		return doctorDAO;
@@ -49,16 +49,15 @@ public class RatingServiceImpl implements RatingService {
 	}
 
 	public RatingDTO getRatingDTO(DoctorDTO doctorDTO) {
-		
+
 		Doctor doctor = doctorDAO.getDoctor(doctorDTO.getId());
-		
+
 		Rating rating = ratingDAO.getRating(doctor);
-		
+
 		RatingDTO ratingDTO = new RatingDTO();
 		BeanUtils.copyProperties(rating, ratingDTO);
-		
+
 		return ratingDTO;
 	}
-	
-	
+
 }

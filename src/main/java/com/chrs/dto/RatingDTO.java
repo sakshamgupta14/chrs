@@ -13,7 +13,8 @@ public class RatingDTO {
 	private Double starRating;
 	private Integer noOfRating;
 	private Double totalRating;
-
+	private DoctorDTO doctorDTO;
+	
 	public Integer getSalaryRangeVisitors() {
 		return salaryRangeVisitors;
 	}
@@ -68,6 +69,14 @@ public class RatingDTO {
 
 	public void setTotalRating(Double totalRating) {
 		this.totalRating = totalRating;
+	}
+
+	public DoctorDTO getDoctorDTO() {
+		return doctorDTO;
+	}
+
+	public void setDoctorDTO(DoctorDTO doctorDTO) {
+		this.doctorDTO = doctorDTO;
 	}
 
 }

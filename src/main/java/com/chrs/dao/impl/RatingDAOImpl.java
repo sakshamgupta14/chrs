@@ -34,4 +34,18 @@ public class RatingDAOImpl extends HibernateDaoSupport implements RatingDAO{
 		getHibernateTemplate().saveOrUpdate(rating);
 	}
 
+
+	public Rating getRatingById(Integer id) {
+
+		DetachedCriteria criteria = DetachedCriteria.forClass(Rating.class);
+		criteria.add(Restrictions.eq("id", id));
+		
+		List<?> list = getHibernateTemplate().findByCriteria(criteria);
+		if(!list.isEmpty()) {
+			return (Rating) list.get(0);
+		}
+		else
+			return null;
+	}
+
 }

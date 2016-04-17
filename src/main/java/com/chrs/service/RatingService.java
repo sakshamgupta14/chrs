@@ -10,7 +10,7 @@ import com.chrs.dto.RatingDTO;
  */
 public interface RatingService {
 
-	void saveOrUpdateRating(DoctorDTO doctorDTO);
+	void saveOrUpdateRating(RatingDTO ratingDTO);
 	
 	RatingDTO getRatingDTO(DoctorDTO doctorDTO);
 }
