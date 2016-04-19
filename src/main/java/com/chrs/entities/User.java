@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
 /**
  * 
  * @author saksham
@@ -35,6 +36,12 @@ public class User {
 
 	@Column(name = "password")
 	private String password;
+
+	@Column(name = "sex")
+	private String sex;
+
+	@Column(name = "salary_range")
+	private Integer SalaryRange;
 
 	@ManyToMany(targetEntity = Doctor.class, fetch = FetchType.LAZY)
 	private List<Doctor> doctors;
@@ -85,6 +92,22 @@ public class User {
 
 	public void setDoctors(List<Doctor> doctors) {
 		this.doctors = doctors;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public Integer getSalaryRange() {
+		return SalaryRange;
+	}
+
+	public void setSalaryRange(Integer salaryRange) {
+		SalaryRange = salaryRange;
 	}
 
 }
