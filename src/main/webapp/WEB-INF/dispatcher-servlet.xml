@@ -18,7 +18,7 @@
 	<mvc:resources location="/js/" mapping="/js/**" />
 	<mvc:resources location="/jquery/" mapping="/jquery/**" />
 	<mvc:resources location="/lib/" mapping="/lib/**" />
-
+	<mvc:resources location="/boot/" mapping="/boot/**" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
