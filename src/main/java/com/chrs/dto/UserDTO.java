@@ -13,6 +13,7 @@ public class UserDTO {
 	private String username;
 	private String email;
 	private String password;
+	private String gender;
 	private List<DoctorDTO> doctorDTOs = new ArrayList<DoctorDTO>();
 
 	public String getName() {
@@ -53,6 +54,14 @@ public class UserDTO {
 
 	public void setDoctorDTOs(List<DoctorDTO> doctorDTOs) {
 		this.doctorDTOs = doctorDTOs;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 }

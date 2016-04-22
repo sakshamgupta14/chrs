@@ -13,13 +13,13 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" id="brand" style="color:#008B8B;font-size:30px;font-family:'Courier New', Courier, monospace;"><b>CHRS</b></a>
+          <a class="navbar-brand" href="/home" id="brand" style="color:#008B8B;font-size:30px;font-family:'Courier New', Courier, monospace;"><b>CHRS</b></a>
         </div>
         
 		<!--navbar content-->
 		<div id="pharma-navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active" style="margin:0px"><a href="#">Home</a></li>
+            <li class="active" style="margin:0px"><a href="/home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="/register">Register With Us</a></li>
 			<li><a href="#contact">Contact Us</a></li>

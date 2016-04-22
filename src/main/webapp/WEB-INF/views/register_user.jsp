@@ -23,7 +23,7 @@
 <body>
 	<div class="container-fluid" style="margin: 2% 5% 2% 5%">
 		<form role="form" class="form-horizontal" method="POST"
-			enctype="multipart/form-data" action="/register/user">
+			action="/registeruser">
 			<h2 class="well" align="center">Registration Form</h2>
 			<hr>
 
@@ -196,8 +196,8 @@
 					<label class="control-label col-lg-6" for="user_id">User_Id
 						: </label>
 					<div class="col-lg-6">
-						<input type="text" class="form-control" id="user_id"
-							name="user_id" placeholder="Desired User_ID" />
+						<input type="text" class="form-control" id="username"
+							name="username" placeholder="Desired User_ID" />
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -213,7 +213,7 @@
 					<label class="control-label col-lg-6" for="password">Password
 						: </label>
 					<div class="col-lg-6">
-						<input type="text" class="form-control" id="password"
+						<input type="password" class="form-control" id="password"
 							name="password" placeholder="Password" />
 					</div>
 				</div>
@@ -221,7 +221,7 @@
 					<label class="control-label col-lg-6" for="con_password">Confirm
 						Password : </label>
 					<div class="col-lg-6">
-						<input type="email" class="form-control" id="con_password"
+						<input type="password" class="form-control" id="con_password"
 							name="con_password" placeholder="Confirm Password" />
 					</div>
 				</div>

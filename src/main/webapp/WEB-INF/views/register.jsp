@@ -7,7 +7,7 @@
 
 <ul>
 
-	<li><a href="#user" onclick=<jsp:forward page="register_user.jsp"></jsp:forward>>User</a></li>
+	<li><a href="/register/user">User</a></li>
 	<li><a href="/register/doctor">Doctor</a></li>
 </ul>
 

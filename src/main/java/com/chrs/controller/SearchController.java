@@ -59,8 +59,11 @@ public class SearchController {
 		
 	}
 	
-	
-	
+	@RequestMapping(value = "/home")
+	public ModelAndView home() {
+		
+		return new ModelAndView("index");
+	}
 	
 	public DoctorService getDoctorService() {
 		return doctorService;
