@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
+<jsp:include page="mynav.jsp"></jsp:include>
 <head>
 	<title>Register</title>
 	<meta charset="utf-8">
@@ -73,7 +74,7 @@
 				<div class="col-lg-6">
 					<label class="control-label col-lg-4" for="location">Location :</label>
 					<div class="col-lg-8">
-						<input type="text" class="form-control" id="city" name="location" placeholder="location"/>
+						<input type="text" class="form-control" id="location" name="location" placeholder="location"/>
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
@@ -36,16 +38,16 @@
 			<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
 			<span class="icon-bar"></span> <span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#" id="brand"
+		<a class="navbar-brand" href="/home" id="brand"
 			style="color: #008B8B; font-size: 30px; font-family: 'Courier New', Courier, monospace;"><b>CHRS</b></a>
 	</div>
 
 	<!--navbar content-->
 	<div id="pharma-navbar" class="navbar-collapse collapse">
 		<ul class="nav navbar-nav navbar-right">
-			<li class="active" style="margin: 0px"><a href="#">Home</a></li>
+			<li class="active" style="margin: 0px"><a href="/home">Home</a></li>
 			<li><a href="#about">About</a></li>
-			<li><a href="#">Products</a></li>
+			<li><a href="/register">Register</a></li>
 			<li><a href="#contact">Contact Us</a></li>
 		</ul>
 	</div>
@@ -60,7 +62,14 @@
 
 	<!--Google map-->
 	<div class="container-fluid" style="margin: 10px">
-		<div id="googleMap" style="width: 100%; height: 400px;"></div>
+	<c:forEach items="${doctors }" var="doctors">
+	
+		<div id="googleMap" style="width: 100%; height: 400px;">
+			${doctors.name }
+			${doctors.field }
+		</div>
+	
+	</c:forEach>
 	</div>
 	<!-- Other relevant data-->
 	<div class="container"></div>
@@ -98,8 +107,7 @@
 		<!--for social media links-->
 		<div class="col-md-3">
 			<p>
-				Follow Us On :<br>
-				<br>
+				Follow Us On :<br> <br>
 			<div class="row" align="left">
 				<div class="col-xs-3" align="left">
 					<a href="https://www.facebook.com/" target="_BLANK"><img

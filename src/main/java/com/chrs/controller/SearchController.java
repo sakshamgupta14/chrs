@@ -15,6 +15,7 @@ import com.chrs.dto.LocationDTO;
 import com.chrs.dto.RatingDTO;
 import com.chrs.dto.SearchDTO;
 import com.chrs.service.DoctorService;
+import com.chrs.service.LocationService;
 import com.chrs.service.RatingService;
 
 /**
@@ -30,6 +31,9 @@ public class SearchController {
 
 	@Autowired
 	private RatingService ratingService;
+	
+	@Autowired
+	private LocationService locationService;
 	
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public ModelAndView search(@ModelAttribute SearchDTO searchDTO) {
@@ -62,7 +66,12 @@ public class SearchController {
 	@RequestMapping(value = "/home")
 	public ModelAndView home() {
 		
-		return new ModelAndView("index");
+		ModelAndView modelAndView = new ModelAndView("index");
+		
+		List<LocationDTO> locationDTOs = locationService.getAllLocationDTOs();
+		modelAndView.addObject("locations", locationDTOs);
+		return modelAndView;
+		
 	}
 	
 	public DoctorService getDoctorService() {
@@ -80,5 +89,13 @@ public class SearchController {
 
 	public void setRatingService(RatingService ratingService) {
 		this.ratingService = ratingService;
+	}
+
+	public LocationService getLocationService() {
+		return locationService;
+	}
+
+	public void setLocationService(LocationService locationService) {
+		this.locationService = locationService;
 	}
 }

@@ -1,5 +1,7 @@
 package com.chrs.dao;
 
+import java.util.List;
+
 import com.chrs.entities.Location;
 
 /**
@@ -11,4 +13,8 @@ import com.chrs.entities.Location;
 public interface LocationDAO {
 
 	Location getLocation(String name);
+	
+	Integer addLocation(Location location);
+	
+	List<Location> getAllLocations();
 }

@@ -62,7 +62,16 @@ public class DoctorServiceImpl implements DoctorService {
 
 		Doctor doctor = new Doctor();
 		BeanUtils.copyProperties(doctorDTO, doctor);
-
+		
+		Location location = locationDAO.getLocation(doctorDTO.getLocation());
+		if(location == null) {
+			location = new Location();
+			location.setName(doctorDTO.getLocation());
+			locationDAO.addLocation(location);
+		}
+		
+		doctor.setLocation(location);
+		
 		return doctorDAO.addDoctor(doctor);
 	}
 

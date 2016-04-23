@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 
@@ -119,7 +121,7 @@
 		<div class="container-fluid" align="center"
 			style="margin: 2% 5% 2% 5%; border: 2px solid #AFAFAF; padding: 0em 3em 3em 3em; border-radius: 10px">
 			<form role="form" class="form-horizontal" method="get"
-				enctype="multipart/form-data" action="/search">
+				action="/search">
 				<h2 class="well" align="center">Query Box</h2>
 				<hr>
 				<!--Other relevant Information-->
@@ -128,8 +130,9 @@
 						<label class="control-label col-lg-5" for="state">Location
 							:</label>
 						<div class="col-lg-7">
-							<select class="form-control" id="locationName" name="locationName">
-								<option value="0">--select any one--</option>
+							<select class="form-control" id="locationName"
+								name="locationName">
+								<!-- <option value="0">--select any one--</option>
 								<option value="1">Crossing Republik</option>
 								<option value="6">Gandhi Nagar</option>
 								<option value="2">Raj Nagar</option>
@@ -138,7 +141,10 @@
 								<option value="4">GhantaGhar</option>
 								<option value="7">PatelNagar</option>
 								<option value="8">Indirapuram</option>
-								<option value="9">Vaishali</option>
+								<option value="9">Vaishali</option> -->
+								<c:forEach items="${locations }" var="locations">
+									<option value="${locations.name }">${locations.name }</option>
+								</c:forEach>
 							</select>
 						</div>
 					</div>

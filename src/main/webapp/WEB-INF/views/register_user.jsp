@@ -4,6 +4,7 @@
 <html lang="en">
 
 <head>
+<jsp:include page="mynav.jsp"></jsp:include>
 <title>Register</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

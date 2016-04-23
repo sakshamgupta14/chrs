@@ -22,7 +22,7 @@ public class Test extends HibernateDaoSupport{
 		
 		doctor.setAddress("galleria market");
 		doctor.setContactNo("8585252522");
-		doctor.setField("ENT");
+//		doctor.setField("ENT");
 		doctor.setInTime("15:00");
 		doctor.setOutTime("22:00");
 		doctor.setLocation(location);

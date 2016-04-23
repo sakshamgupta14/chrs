@@ -14,6 +14,7 @@ public class UserDTO {
 	private String email;
 	private String password;
 	private String gender;
+	private Integer income;
 	private List<DoctorDTO> doctorDTOs = new ArrayList<DoctorDTO>();
 
 	public String getName() {
@@ -62,6 +63,14 @@ public class UserDTO {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public Integer getIncome() {
+		return income;
+	}
+
+	public void setIncome(Integer income) {
+		this.income = income;
 	}
 
 }

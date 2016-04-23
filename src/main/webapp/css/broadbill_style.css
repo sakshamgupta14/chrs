@@ -59,6 +59,16 @@ p
 		{
 			height:300px !important;
 		}
+		.top-carousel
+	{
+		margin-top:-20px !important;
+	}
+	.carousel-caption h1
+	{
+		font-size:10px !important;
+	}
+	
+		
    
    #brand
 		{

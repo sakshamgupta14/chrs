@@ -12,7 +12,7 @@ public class DoctorDTO {
 	private String inTime;
 	private String address;
 	private String contactNo;
-	private LocationDTO locationDTO;
+	private String location;
 	private Integer id;
 	
 	public Integer getId() {
@@ -71,12 +71,13 @@ public class DoctorDTO {
 		this.contactNo = contactNo;
 	}
 
-	public LocationDTO getLocationDTO() {
-		return locationDTO;
+	public String getLocation() {
+		return location;
 	}
 
-	public void setLocationDTO(LocationDTO locationDTO) {
-		this.locationDTO = locationDTO;
+	public void setLocation(String location) {
+		this.location = location;
 	}
+
 
 }

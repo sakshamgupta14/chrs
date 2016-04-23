@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -27,9 +28,6 @@ public class Doctor {
 
 	@Column(name = "name")
 	private String name;
-
-	@Column(name = "field")
-	private String field;
 
 	@Column(name = "out_time")
 	private String outTime;
@@ -52,6 +50,9 @@ public class Doctor {
 	@OneToOne(fetch = FetchType.EAGER, targetEntity = Rating.class)
 	private Rating rating;
 
+	@OneToMany(cascade = CascadeType.ALL, targetEntity = Field.class)
+	private Field field;
+	
 	public Location getLocation() {
 		return location;
 	}
@@ -84,13 +85,6 @@ public class Doctor {
 		this.name = name;
 	}
 
-	public String getField() {
-		return field;
-	}
-
-	public void setField(String field) {
-		this.field = field;
-	}
 
 	public String getOutTime() {
 		return outTime;
@@ -130,6 +124,14 @@ public class Doctor {
 
 	public void setSalaryRange(Integer salaryRange) {
 		this.salaryRange = salaryRange;
+	}
+
+	public Field getField() {
+		return field;
+	}
+
+	public void setField(Field field) {
+		this.field = field;
 	}
 
 }
