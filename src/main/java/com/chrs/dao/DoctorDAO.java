@@ -3,6 +3,7 @@ package com.chrs.dao;
 import java.util.List;
 
 import com.chrs.entities.Doctor;
+import com.chrs.entities.Field;
 import com.chrs.entities.Location;
 /**
  * 
@@ -19,4 +20,5 @@ public interface DoctorDAO {
 	
 	Doctor getDoctor(Integer id);
 	
+	List<Doctor> getAllDoctorsByType(Field field, Location location);
 }

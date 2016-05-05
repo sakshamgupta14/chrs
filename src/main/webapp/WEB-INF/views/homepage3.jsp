@@ -164,11 +164,14 @@
 						Service :</label>
 					<div class="col-lg-7">
 						<select class="form-control" id="service" name="service">
-							<option value="0">--select any one--</option>
+							<!-- <option value="0">--select any one--</option>
 							<option value="ENT">ENT</option>
 							<option value="Orthopadic">Orthopadic</option>
 							<option value="Dentist">Dentist</option>
-							<option value="Physician">Physician</option>
+							<option value="Physician">Physician</option> -->
+								<c:forEach items="${fields }" var="fields">
+									<option value="${fields.name }">${fields.name }</option>
+								</c:forEach>
 						</select>
 					</div>
 				</div>

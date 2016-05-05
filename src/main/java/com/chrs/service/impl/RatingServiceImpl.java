@@ -26,10 +26,16 @@ public class RatingServiceImpl implements RatingService {
 
 	public void saveOrUpdateRating(RatingDTO ratingDTO) {
 
-		Rating rating = new Rating();
+		/*Rating rating = new Rating();
 		rating.setDoctor(doctorDAO.getDoctor(ratingDTO.getDoctorDTO().getId()));
-
+*/
 		// rating.setNonSalaryRangeRecommendations(nonSalaryRangeRecommendations);
+		Doctor doctor = doctorDAO.getDoctor(ratingDTO.getDoctorDTO().getId());
+		Rating rating = ratingDAO.getRating(doctor);
+		
+		rating.setTotalRating(rating.getTotalRating()+1);
+		
+		ratingDAO.saveOrUpdateRating(rating);
 	}
 
 	public DoctorDAO getDoctorDAO() {

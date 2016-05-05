@@ -141,8 +141,8 @@
 					<label class="control-label col-lg-6" for="con_number">Contact
 						Number : </label>
 					<div class="col-lg-6">
-						<input type="text" class="form-control" id="con_number"
-							name="con_number" placeholder="Contact Number" />
+						<input type="text" class="form-control" id="contactNumber"
+							name="contactNumber" placeholder="Contact Number" />
 					</div>
 				</div>
 

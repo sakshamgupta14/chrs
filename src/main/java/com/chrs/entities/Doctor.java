@@ -50,7 +50,7 @@ public class Doctor {
 	@OneToOne(fetch = FetchType.EAGER, targetEntity = Rating.class)
 	private Rating rating;
 
-	@OneToMany(cascade = CascadeType.ALL, targetEntity = Field.class)
+	@ManyToOne(cascade = CascadeType.ALL, targetEntity = Field.class)
 	private Field field;
 	
 	public Location getLocation() {

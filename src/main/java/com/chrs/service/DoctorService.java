@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.chrs.dto.DoctorDTO;
 import com.chrs.dto.LocationDTO;
+import com.chrs.dto.SearchDTO;
 /**
  * 
  * @author saksham
@@ -20,4 +21,6 @@ public interface DoctorService {
 	List<DoctorDTO> getDoctorDTOByLocation(LocationDTO locationDTO);
 	
 	DoctorDTO getDoctorDTO(Integer id);
+	
+	List<DoctorDTO> getDoctorBySearchDTO(SearchDTO searchDTO);
 }

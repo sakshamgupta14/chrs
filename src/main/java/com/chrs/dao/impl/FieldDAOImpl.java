@@ -8,7 +8,11 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import com.chrs.dao.FieldDAO;
 import com.chrs.entities.Field;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class FieldDAOImpl extends HibernateDaoSupport implements FieldDAO {
 
 	public Field getField(String name) {

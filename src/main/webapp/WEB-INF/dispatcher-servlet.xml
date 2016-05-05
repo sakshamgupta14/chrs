@@ -13,12 +13,12 @@
 	<context:component-scan base-package="com.chrs.controller"></context:component-scan>
 
 
-	<mvc:resources location="/images/" mapping="/images/**" />
-	<mvc:resources location="/css/" mapping="/css/**" />
-	<mvc:resources location="/js/" mapping="/js/**" />
-	<mvc:resources location="/jquery/" mapping="/jquery/**" />
-	<mvc:resources location="/lib/" mapping="/lib/**" />
-	<mvc:resources location="/boot/" mapping="/boot/**" />
+	<mvc:resources location="/images/" mapping="**/images/**" />
+	<mvc:resources location="/css/" mapping="**/css/**" />
+	<mvc:resources location="/js/" mapping="**/js/**" />
+	<mvc:resources location="/jquery/" mapping="**/jquery/**" />
+	<mvc:resources location="/lib/" mapping="**/lib/**" />
+	<mvc:resources location="/boot/" mapping="**/boot/**" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -98,6 +98,12 @@
 		</property>
 	</bean>
 	
+	<bean id="fieldDAO" class="com.chrs.dao.impl.FieldDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
 	<bean id="doctorService" parent="baseTransactionProxy">
 		<property name="target">
 			<bean class="com.chrs.service.impl.DoctorServiceImpl">
@@ -108,6 +114,16 @@
 		</property>
 	</bean>
 
+	<bean id="fieldService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="com.chrs.service.impl.FieldServiceImpl">
+				<property name="fieldDAO">
+					<ref bean="fieldDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
 	<bean id="locationService" parent="baseTransactionProxy">
 		<property name="target">
 			<bean class="com.chrs.service.impl.LocationServiceImpl">

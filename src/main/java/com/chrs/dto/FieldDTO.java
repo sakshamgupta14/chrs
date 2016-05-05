@@ -1,5 +1,9 @@
 package com.chrs.dto;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class FieldDTO {
 
 	private String name;

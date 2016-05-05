@@ -10,22 +10,24 @@ import com.chrs.dto.LocationDTO;
 import com.chrs.entities.Location;
 import com.chrs.service.LocationService;
 
-public class LocationServiceImpl implements LocationService{
+public class LocationServiceImpl implements LocationService {
 
 	@Autowired
 	private LocationDAO locationDAO;
-	
+
 	public List<LocationDTO> getAllLocationDTOs() {
-		
+
 		List<Location> locations = locationDAO.getAllLocations();
 		List<LocationDTO> locationDTOs = new ArrayList<LocationDTO>();
-		
-		for(Location location : locations) {
-			LocationDTO locationDTO = new LocationDTO();
-			locationDTO.setName(location.getName());
-			locationDTOs.add(locationDTO);
-		}
+		if (locations != null){
+			for (Location location : locations) {
+				LocationDTO locationDTO = new LocationDTO();
+				locationDTO.setName(location.getName());
+				locationDTOs.add(locationDTO);
+			}
 		return locationDTOs;
+		}
+		return null;
 	}
 
 	public LocationDAO getLocationDAO() {
@@ -35,6 +37,5 @@ public class LocationServiceImpl implements LocationService{
 	public void setLocationDAO(LocationDAO locationDAO) {
 		this.locationDAO = locationDAO;
 	}
-
 
 }

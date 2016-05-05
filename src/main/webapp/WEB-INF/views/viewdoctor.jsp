@@ -6,6 +6,7 @@
 
 <html lang="en">
 
+
 <head>
 <title>CHRS | Result</title>
 <meta charset="utf-8">
@@ -24,6 +25,58 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
+
+<!--TOP Carousel-->
+<div width="100%" class="top-carousel" align="center">
+	<br>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+
+				<img src="/images/slide1.jpg" alt="slide_1" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>SHAPING THE FUTURE OF HEALTHCARE</h1>
+						<p>Description here</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/images/slide3.jpg" alt="slide_2" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>CHANGING THE WORLD OF MEDICINE</h1>
+						<p>Description here</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/images/heartbeat2.jpg" alt="slide_3" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>QUALITY FOR EVERYONE</h1>
+						<p>Description here</p>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--End of Carousel-->
 
 <!-- Fixed navbar -->
 <nav class="navbar  navbar-default navbar-fixed mynavbar" id="mynavbar"
@@ -56,21 +109,17 @@
 </nav>
 <!--end of navbar-->
 
-
 <!--Main content-->
 <div class="container">
-
+	
+	Dr. ${doctors.name } <br/>
+	In Time :  ${doctors.inTime }<br/>
+	Out Time : ${doctors.outTime } <br/>
+	Contact No: ${doctors.contactNo } <br/>
+	Address : ${doctors.address }<br/>
 	<!--Google map-->
 	<div class="container-fluid" style="margin: 10px">
-	<c:forEach items="${doctors }" var="doctors">
-	
-		<div id="googleMap" style="width: 100%; height: 100px;">
-			<a href="/viewdoctor/${doctors.id }">Dr. ${doctors.name }</a><br/>
-			In Time:   ${doctors.inTime } <br/>
-			Out Time : ${doctors.outTime } <br/>
-		</div>
-	
-	</c:forEach>
+		<div id="googleMap" style="width: 100%; height: 50px;"></div>
 	</div>
 	<!-- Other relevant data-->
 	<div class="container"></div>
@@ -99,7 +148,7 @@
 
 			<!--for contact column-->
 			<div class="col-sm-6">
-				<img src="images/logo.jpg" width="50%" />
+				<img src="/images/logo.jpg" width="50%" />
 			</div>
 		</div>
 
@@ -112,21 +161,21 @@
 			<div class="row" align="left">
 				<div class="col-xs-3" align="left">
 					<a href="https://www.facebook.com/" target="_BLANK"><img
-						src="images/social/fb.png"
-						onmouseover="this.src='images/social/fbhover.png'"
-						onmouseout="this.src='images/social/fb.png'"></a>
+						src="/images/social/fb.png"
+						onmouseover="this.src='/images/social/fbhover.png'"
+						onmouseout="this.src='/images/social/fb.png'"></a>
 				</div>
 				<div class="col-xs-3" align="left">
 					<a href="https://plus.google.com/" target="_BLANK"><img
-						src="images/social/g+.png"
-						onmouseover="this.src='images/social/g+hover.png'"
-						onmouseout="this.src='images/social/g+.png'" target="blank"></a>
+						src="/images/social/g+.png"
+						onmouseover="this.src='/images/social/g+hover.png'"
+						onmouseout="this.src='/images/social/g+.png'" target="blank"></a>
 				</div>
 				<div class="col-xs-3" align="left">
 					<a href="https://twitter.com/" target="_BLANK"><img
-						src="images/social/twitter.png"
-						onmouseover="this.src='images/social/twitterhover.png'"
-						onmouseout="this.src='images/social/twitter.png'" target="blank"></a>
+						src="/images/social/twitter.png"
+						onmouseover="this.src='/images/social/twitterhover.png'"
+						onmouseout="this.src='/images/social/twitter.png'" target="blank"></a>
 				</div>
 			</div>
 		</div>
@@ -172,3 +221,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 </html>
+
+
+
+<%-- 
+<jsp:include page="homepage3.jsp"></jsp:include> --%>

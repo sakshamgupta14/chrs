@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.chrs.dto.DoctorDTO;
+import com.chrs.dto.FieldDTO;
 import com.chrs.dto.LocationDTO;
 import com.chrs.dto.UserDTO;
 import com.chrs.service.DoctorService;
+import com.chrs.service.FieldService;
 import com.chrs.service.LocationService;
 import com.chrs.service.UserService;
 
@@ -32,6 +34,9 @@ public class RegisterController {
 	@Autowired
 	private LocationService locationService;
 
+	@Autowired
+	private FieldService fieldService;
+	
 	@RequestMapping(value = "/register")
 	public ModelAndView register() {
 
@@ -47,6 +52,9 @@ public class RegisterController {
 		ModelAndView modelAndView = new ModelAndView("index");
 
 		List<LocationDTO> locationDTOs = getLocationService().getAllLocationDTOs();
+		List<FieldDTO> fieldDTOs = fieldService.getAllFields();
+
+		modelAndView.addObject("fields", fieldDTOs);
 		modelAndView.addObject("locations", locationDTOs);
 		return modelAndView;
 	}
@@ -59,6 +67,9 @@ public class RegisterController {
 		ModelAndView modelAndView = new ModelAndView("index");
 
 		List<LocationDTO> locationDTOs = getLocationService().getAllLocationDTOs();
+		List<FieldDTO> fieldDTOs = getFieldService().getAllFields();
+
+		modelAndView.addObject("fields", fieldDTOs);
 		modelAndView.addObject("locations", locationDTOs);
 		return modelAndView;
 	}
@@ -99,6 +110,14 @@ public class RegisterController {
 
 	public void setLocationService(LocationService locationService) {
 		this.locationService = locationService;
+	}
+
+	public FieldService getFieldService() {
+		return fieldService;
+	}
+
+	public void setFieldService(FieldService fieldService) {
+		this.fieldService = fieldService;
 	}
 
 }
