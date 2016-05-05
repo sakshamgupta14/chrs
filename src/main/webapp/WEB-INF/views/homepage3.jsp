@@ -12,14 +12,14 @@
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link rel="stylesheet" media="all" href='css/jquery-jvectormap.css' />
-<link rel="shortcut icon" href="images/tab4.png">
+<link rel="shortcut icon" href="/images/tab4.png">
 <link rel="stylesheet" type="text/css" href="css/broadbill_style.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
-<script src="js/map/googleMap.js"></script>
+<script src="/js/map/googleMap.js"></script>
 </head>
 
 <body>
@@ -85,7 +85,7 @@
 	<div class="container" class="main">
 		<div class="row">
 			<div class="col-lg-4" align="center">
-				<img class="img-circle" src="images/people.jpg"
+				<img class="img-circle" src="/images/people.jpg"
 					alt="Broadbill Pharma - Quality For Everyone" width="140"
 					height="140">
 				<h2>QUALITY FOR EVERYONE</h2>
@@ -96,7 +96,7 @@
 			</div>
 
 			<div class="col-lg-4" align="center">
-				<img class="img-circle" src="images/healthcare.jpg"
+				<img class="img-circle" src="/images/healthcare.jpg"
 					alt="Broadbill Pharma - Shaping the Future" width="140"
 					height="140">
 				<h2>SHAPING THE FUTURE OF HEALTHCARE</h2>
@@ -107,7 +107,7 @@
 			</div>
 
 			<div class="col-lg-4" align="center">
-				<img class="img-circle" src="images/medicine.jpg"
+				<img class="img-circle" src="/images/medicine.jpg"
 					alt="Broadbill Pharma - Changing The World of Medicine" width="140"
 					height="140">
 				<h2>CHANGING THE WORLD OF MEDICINE</h2>
@@ -222,7 +222,7 @@
 	<!-- Bootstrap core JavaScript
     ==================================================-->
 	<!--external jquery include file containig function-->
-	<script src="jquery/homepage-script.js"></script>
+	<script src="/jquery/homepage-script.js"></script>
 
 
 

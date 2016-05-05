@@ -9,7 +9,11 @@ import com.chrs.dao.LocationDAO;
 import com.chrs.dto.LocationDTO;
 import com.chrs.entities.Location;
 import com.chrs.service.LocationService;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class LocationServiceImpl implements LocationService {
 
 	@Autowired

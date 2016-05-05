@@ -13,12 +13,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" media="all" href='css/jquery-jvectormap.css' />
+<link rel="stylesheet" media="all" href='/css/jquery-jvectormap.css' />
 <link rel="shortcut icon" href="/images/tab4.png">
-<link rel="stylesheet" type="text/css" href="css/broadbill_style.css">
-<link rel="stylesheet" href="boot/css/bootstrap.min.css">
-<script src="js/jquery-1.12.0.min"></script>
-<script src="boot/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/broadbill_style.css">
+<link rel="stylesheet" href="/boot/css/bootstrap.min.css">
+<script src="/js/jquery-1.12.0.min"></script>
+<script src="/boot/js/bootstrap.min.js"></script>
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -213,7 +213,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <!--src for scripting of moving the page to top-->
-<script src="jquery/footer.js"></script>
+<script src="/jquery/footer.js"></script>
 
 
 <!--jquery src for scripting-->

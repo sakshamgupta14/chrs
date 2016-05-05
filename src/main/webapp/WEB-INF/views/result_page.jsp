@@ -71,10 +71,16 @@
 		</div>
 	
 	</c:forEach>
+	
 	</div>
+	
 	<!-- Other relevant data-->
 	<div class="container"></div>
-
+	<c:if test="${empty doctors}">
+		<div class="container-fluid" style="margin: 10px; height: 10 px;">
+		No doctors found 
+		</div>
+	</c:if>
 </div>
 
 

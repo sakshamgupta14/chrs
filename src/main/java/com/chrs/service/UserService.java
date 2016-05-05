@@ -1,7 +1,11 @@
 package com.chrs.service;
 
 import com.chrs.dto.UserDTO;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public interface UserService {
 
 	Integer addUser(UserDTO userDTO);

@@ -8,7 +8,11 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import com.chrs.entities.Doctor;
 import com.chrs.entities.Location;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class Test extends HibernateDaoSupport{
 
 	public void save() {

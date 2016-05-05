@@ -2,7 +2,11 @@ package com.chrs.util;
 
 import com.chrs.dto.UserDTO;
 import com.chrs.entities.User;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class Converter {
 
 	public User UserDTOToUser(UserDTO userDTO) {
