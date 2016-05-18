@@ -8,7 +8,11 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import com.chrs.dao.LocationDAO;
 import com.chrs.entities.Location;
-
+/**
+ * 
+ * @author saksham
+ *
+ */
 public class LocationDAOImpl extends HibernateDaoSupport implements LocationDAO {
 
 	public Location getLocation(String name) {
