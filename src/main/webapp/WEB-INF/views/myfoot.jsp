@@ -34,7 +34,7 @@
 					<p>Follow Us On :<br><br>
 					<div class="row"  align="left">
 						<div class="col-xs-4"  align="left">
-							<a href="https://www.facebook.com/" target="_BLANK"><img src="images/social/fb.png" onmouseover="this.src='images/social/fbhover.png'" onmouseout="this.src='images/social/fb.png'"></a>
+							<a href="https://www.facebook.com/hospitalrecommender" target="_BLANK"><img src="images/social/fb.png" onmouseover="this.src='images/social/fbhover.png'" onmouseout="this.src='images/social/fb.png'"></a>
 						</div>
 						<div class="col-xs-4"  align="left">
 							<a href="https://plus.google.com/" target="_BLANK"><img src="images/social/g+.png" onmouseover="this.src='images/social/g+hover.png'" onmouseout="this.src='images/social/g+.png'" target="blank"></a>

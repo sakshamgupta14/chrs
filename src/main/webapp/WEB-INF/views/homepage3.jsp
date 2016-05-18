@@ -169,9 +169,9 @@
 							<option value="Orthopadic">Orthopadic</option>
 							<option value="Dentist">Dentist</option>
 							<option value="Physician">Physician</option> -->
-								<c:forEach items="${fields }" var="fields">
-									<option value="${fields.name }">${fields.name }</option>
-								</c:forEach>
+							<c:forEach items="${fields }" var="fields">
+								<option value="${fields.name }">${fields.name }</option>
+							</c:forEach>
 						</select>
 					</div>
 				</div>
@@ -188,17 +188,14 @@
 		</div>
 
 		<!--faded panel-->
-		<div class="panel panel-default" style="margin-top: 5%">
+		<div class="panel panel-default" style="margin-top: 5%" id="about">
 			<div class="panel-heading" id="panelhead" style="font-size: 30px;">
 				Who We Are..?</div>
-			<div class="panel-body" id="mypanel">Lorem ipsum dolor sit
-				amet, consectetur adipiscing elit. Nam eu condimentum nulla, at
-				efficitur diam. Integer nunc eros, tempor ut ex quis, congue tempor
-				dolor. Sed dictum, lacus vel ultrices bibendum, turpis lectus
-				hendrerit leo, eget aliquet mauris risus sed tellus. Morbi varius
-				sapien eros, eget accumsan sem porttitor non. Nam ultrices sed odio
-				sed porta. Aliquam elementum eget quam eu congue. Donec laoreet dui
-				vel augue luctus molestie.</div>
+			<div class="panel-body" id="mypanel">We are group of 4
+				students: Saksham Gupta, Ekansh Jain, Aayush Jain, Deepak Tomar, we
+				are the students of ABES Engineering College, Ghaziabad. CHRS is a
+				recommender system that will guide the user to nearest and best
+				doctor according to their needs and requirements.</div>
 
 		</div>
 
