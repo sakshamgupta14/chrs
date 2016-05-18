@@ -101,7 +101,7 @@
 			<li class="active" style="margin: 0px"><a href="/home">Home</a></li>
 			<li><a href="#about">About</a></li>
 			<li><a href="/register">Register</a></li>
-			<li><a href="#contact">Contact Us</a></li>
+			<li><a href="/contact">Contact Us</a></li>
 		</ul>
 	</div>
 	<!--/.nav-collapse -->

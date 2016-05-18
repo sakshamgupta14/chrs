@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="en">
 
-
 <head>
-<title>CHRS | Register</title>
+<title>CHRS | Result</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -24,57 +25,56 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
-<!--TOP Carousel-->
-	<div width="100%" class="top-carousel" align="center">
-		<br>
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>
+<div width="100%" class="top-carousel" align="center">
+	<br>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
 
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
 
-					<img src="/images/slide1.jpg" alt="slide_1" width="100%">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>SHAPING THE FUTURE OF HEALTHCARE</h1>
-							<p>Description here</p>
+				<img src="/images/slide1.jpg" alt="slide_1" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>SHAPING THE FUTURE OF HEALTHCARE</h1>
+						<p>Description here</p>
 
-						</div>
 					</div>
 				</div>
-
-				<div class="item">
-					<img src="/images/slide3.jpg" alt="slide_2" width="100%">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>CHANGING THE WORLD OF MEDICINE</h1>
-							<p>Description here</p>
-
-						</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<img src="images/heartbeat2.jpg" alt="slide_3" width="100%">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>QUALITY FOR EVERYONE</h1>
-							<p>Description here</p>
-
-						</div>
-					</div>
-				</div>
-
 			</div>
+
+			<div class="item">
+				<img src="/images/slide3.jpg" alt="slide_2" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>CHANGING THE WORLD OF MEDICINE</h1>
+						<p>Description here</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/images/heartbeat2.jpg" alt="slide_3" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>QUALITY FOR EVERYONE</h1>
+						<p>Description here</p>
+
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
-	<!--End of Carousel-->
+</div>
+<!--End of Carousel-->
 
 <!-- Fixed navbar -->
 <nav class="navbar  navbar-default navbar-fixed mynavbar" id="mynavbar"
@@ -99,7 +99,7 @@
 			<li class="active" style="margin: 0px"><a href="/home">Home</a></li>
 			<li><a href="#about">About</a></li>
 			<li><a href="/register">Register</a></li>
-			<li><a href="/contact">Contact Us</a></li>
+			<li><a href="#contact">Contact Us</a></li>
 		</ul>
 	</div>
 	<!--/.nav-collapse -->
@@ -107,21 +107,24 @@
 </nav>
 <!--end of navbar-->
 
+
 <!--Main content-->
 <div class="container">
-<ul style="font-size:150%;">
-
-	<li><a href="/register/user">User</a></li>
-	<li><a href="/register/doctor">Doctor</a></li>
-</ul>
 
 	<!--Google map-->
-	<div class="container-fluid" style="margin: 10px">
-		<div id="googleMap" style="width: 100%; height: 50px;"></div>
+	
+	
 	</div>
+	
 	<!-- Other relevant data-->
-	<div class="container"></div>
-
+	<div class="container">
+		
+		Site Developed and Maintained By : <br/>
+		<a href="https://www.facebook.com/sakshamgupta14" target="_blank">Saksham Gupta</a> <br/>
+		<a href="https://www.facebook.com/ekansh.jainny2" target="_blank">Ekansh Jain </a><br/>
+		<a href="https://www.facebook.com/aayushjains20" target="_blank">Aayush Jain</a><br/>
+		<a href="https://www.facebook.com/deepak.tomar.77312" target="_blank">Deepak Tomar</a><br/>
+	</div>
 </div>
 
 
@@ -155,8 +158,7 @@
 		<!--for social media links-->
 		<div class="col-md-3">
 			<p>
-				Follow Us On :<br>
-				<br>
+				Follow Us On :<br> <br>
 			<div class="row" align="left">
 				<div class="col-xs-3" align="left">
 					<a href="https://www.facebook.com/" target="_BLANK"><img
@@ -220,8 +222,3 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 </html>
-
-
-
-<%-- 
-<jsp:include page="homepage3.jsp"></jsp:include> --%>

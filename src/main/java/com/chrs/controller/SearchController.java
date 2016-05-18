@@ -93,7 +93,15 @@ public class SearchController {
 		return modelAndView;
 
 	}
+	
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {
+		ModelAndView modelAndView = new ModelAndView("contact_us");
 
+		
+		return modelAndView;
+	}
+	
 	public DoctorService getDoctorService() {
 		return doctorService;
 	}

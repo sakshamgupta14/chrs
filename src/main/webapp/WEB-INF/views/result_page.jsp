@@ -25,6 +25,57 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
+<div width="100%" class="top-carousel" align="center">
+	<br>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+
+				<img src="/images/slide1.jpg" alt="slide_1" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>SHAPING THE FUTURE OF HEALTHCARE</h1>
+						<p>Description here</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/images/slide3.jpg" alt="slide_2" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>CHANGING THE WORLD OF MEDICINE</h1>
+						<p>Description here</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/images/heartbeat2.jpg" alt="slide_3" width="100%">
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>QUALITY FOR EVERYONE</h1>
+						<p>Description here</p>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--End of Carousel-->
+
 <!-- Fixed navbar -->
 <nav class="navbar  navbar-default navbar-fixed mynavbar" id="mynavbar"
 	width="100%">
@@ -48,7 +99,7 @@
 			<li class="active" style="margin: 0px"><a href="/home">Home</a></li>
 			<li><a href="#about">About</a></li>
 			<li><a href="/register">Register</a></li>
-			<li><a href="#contact">Contact Us</a></li>
+			<li><a href="/contact">Contact Us</a></li>
 		</ul>
 	</div>
 	<!--/.nav-collapse -->
